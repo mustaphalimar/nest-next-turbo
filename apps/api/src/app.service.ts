@@ -1,4 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { z } from 'zod';
+
+const schema = z.object({
+  name: z.string(),
+  email: z.string(),
+});
 
 @Injectable()
 export class AppService {

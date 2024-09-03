@@ -1,8 +1,14 @@
 import Image from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
+import { z } from "zod";
 
 export default function Home() {
+  const schema = z.object({
+    name: z.string(),
+    email: z.string(),
+  });
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
