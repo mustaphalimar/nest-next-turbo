@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { PrismaService } from '@/prisma/prisma.service';
-import argon from 'argon2';
+import * as argon from 'argon2';
 
 @Injectable()
 export class UserService {
@@ -21,7 +21,7 @@ export class UserService {
   }
 
   async findByEmail(email: string) {
-    await this.prismaService.user.findUnique({
+    return await this.prismaService.user.findUnique({
       where: {
         email,
       },
