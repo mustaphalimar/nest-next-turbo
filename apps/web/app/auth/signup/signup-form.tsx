@@ -3,7 +3,6 @@ import { signUp } from "@/actions/auth";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import SubmitButton from "@/components/ui/submit-button";
-// import { signUp } from "@/lib/auth";
 import React from "react";
 import { useFormState } from "react-dom";
 
